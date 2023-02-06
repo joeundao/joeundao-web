@@ -31,7 +31,7 @@ export default function JoeunDAO(props: { proposals: SnapshotProposals[] }) {
         <link rel="icon" href="/joeundao-logo.png" type="image/png" />
       </Head>
       <main>
-        <div className="container items-center justify-between p-4 mx-auto mt-10 sm:flex">
+        <div className="container items-center justify-between p-6 mx-auto mt-10 sm:flex">
           <div className="flex items-center">
             <Link href="/">
               <Image
@@ -64,8 +64,17 @@ export default function JoeunDAO(props: { proposals: SnapshotProposals[] }) {
           </Link>
         </div>
 
-        <div className="container p-4 mx-auto mt-10">
-          <h2 className="mb-4 text-2xl font-bold">Proposals</h2>
+        <div className="container p-6 mx-auto mt-10">
+          <div className="flex items-center justify-between mb-6">
+            <h2 className="text-2xl font-bold">Proposals</h2>
+            <Link
+              href="https://snapshot.org/#/joeundao.eth/create/0"
+              type="button"
+              className="inline-flex items-center px-4 py-2 text-base font-medium text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2"
+            >
+              Add Proposal
+            </Link>
+          </div>
           {proposals.map((proposal, index) => {
             return (
               <Link
